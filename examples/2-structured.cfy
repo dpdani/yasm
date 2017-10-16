@@ -22,9 +22,7 @@
 <nesting>
   hurts = 'your eyes'
   plz = 
-    <>                              # oh cool so you don't have to 
-specify an identifier when it's nested
-      do_dis = 'NEVER'              # yes, but nobody likes nested 
-stuff
+    <>                              # oh cool so you don't have to specify an identifier when it's nested
+      do_dis = 'NEVER'              # yes, but nobody likes nested stuff
     </>
 </>
