@@ -1,0 +1,26 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# yasm config files support the including
+# of multiple separate config files.
+# these files need not to be in yasm format
+# every supported backend for yasm is
+# supported for inclusion.
+# see a full list at TODO
+
+# let's try to extend example #5
+
+include ~/.config/awesomehttpserver/base.cfy
+include ~/.config/awesomehttpserver/base_v2.ini
+
+
+# note: keys defined multiple times (even in multiple
+# included config files) will be overridden.
+# ==> order matters
+
+key_defined_in_base = 'override'
+
+if RUN_LOCAL:
+    include ~/.config/awesomehttpserver/local.json
+else:
+    include ~/.config/awesomehttpserver/external.xml

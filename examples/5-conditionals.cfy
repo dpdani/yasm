@@ -5,8 +5,8 @@
 # statements in a syntax similar to python's
 
 if RUN_LOCAL:
-  server.port = 8080
-  server.host = 'localhost'
+    server.port = 8080
+    server.host = 'localhost'
 else:
-  server.port = 80
-  server.host = '192.168.6.66'
+    server.port = 80
+    server.host = '192.168.6.66'
