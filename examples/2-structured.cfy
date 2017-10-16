@@ -1,0 +1,30 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+#
+# structured key basic syntax:
+#
+#   <IDENTIFIER>
+#     KEY1 = VAL1
+#     KEY2 = VAL2
+#     ...
+#   </>
+#
+# identation is not mandatory, but highly appreciated :)
+
+
+<cat>
+  name = 'Pallino'
+  is_sleeping = yes
+  wants_food = on
+</>
+
+<nesting>
+  hurts = 'your eyes'
+  plz = 
+    <>                              # oh cool so you don't have to 
+specify an identifier when it's nested
+      do_dis = 'NEVER'              # yes, but nobody likes nested 
+stuff
+    </>
+</>

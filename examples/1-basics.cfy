@@ -1,0 +1,27 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# assigning a variable
+posix = 'better'
+spam.foo = 42
+
+# basic supported types:
+a_string = 'oh wow'
+a_multiline_string = """
+such
+lines
+"""
+an_int = 420
+a_datetime = 2017-10-15@18:47:32
+a_dict = {
+   'no': 'nesting',
+   'plz': True
+}
+a_bool = true # or True, or False, or on, or off, or yes, or no, or 
+1, or 0, or true, or false
+an_enum = 'LOOKS_LIKE_A_STRING'  # but it's not!
+                                 # to make it work, your program
+                                 # must define this key as an enum
+
+# oh btw did you notice comments?
+# cool, uh?

@@ -1,0 +1,11 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# yasm can provide global constants to your config files
+when = TODAY
+
+# full list available at: TODO
+
+# you can tell yasm to turn them off in your application
+# or you can provide your custom ones
+# see TODO for more details

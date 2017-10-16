@@ -1,0 +1,12 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# yasm config files support conditional
+# statements in a syntax similar to python's
+
+if RUN_LOCAL:
+  server.port = 8080
+  server.host = 'localhost'
+else:
+  server.port = 80
+  server.host = '192.168.6.66'

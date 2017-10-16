@@ -1,0 +1,19 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# abstract: nesting is bad
+# yasm helps you prevent it.
+
+
+server.port = 80
+
+# is equivalent to
+
+port = 80
+
+
+# this way, you can have all your config fields
+# well-organized in your application without
+# moving the burden to your users.
+# More information on dynamic scoping at:
+# TODO
