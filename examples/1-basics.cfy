@@ -1,15 +1,21 @@
 # This file is part of the yasm project
 # Feel free to use it as you wish
 
-# assigning a variable
+
+# defining a config key
 posix = 'better'
 spam.foo = 42
 
+
+# oh btw did you notice comments?
+# cool, uh?
+
+
 # basic supported types:
 a_string = 'oh wow'
-a_multiline_string = """
-such
-lines
+a_multiline_string = """   # comments work in multiline strings too :)
+such                       # to use the '#' character inside of a 
+lines                      # multiline string, use '\#'
 """
 an_int = 420
 a_datetime = 2017-10-15@18:47:32
@@ -22,5 +28,3 @@ an_enum = 'LOOKS_LIKE_A_STRING'  # but it's not!
                                  # to make it work, your program
                                  # must define this key as an enum
 
-# oh btw did you notice comments?
-# cool, uh?

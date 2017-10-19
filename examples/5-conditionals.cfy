@@ -4,7 +4,10 @@
 # yasm config files support conditional
 # statements in a syntax similar to python's
 
-if RUN_LOCAL:
+if RUN_LOCAL and TODAY >= 2017-01-01:
+    server.port = 8081
+    server.host = 'localhost'
+elif RUN_LOCAL:
     server.port = 8080
     server.host = 'localhost'
 else:

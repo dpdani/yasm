@@ -1,0 +1,22 @@
+# This file is part of the yasm project
+# Feel free to use it as you wish
+
+# you can use spaces in a key
+# definition, instead of underscores
+
+key with spaces = 'works!'
+# equivalent to:
+key_with_spaces = "it's actually not bro"
+
+# you can also use spaces in keys
+# that need a dot notation.
+# spaces around dots will be ignored
+
+key . with . spaces = 42
+# equivalent to
+key.with.spaces = 42
+
+another example of . spaced key = yes
+# equivalent to:
+another_example_of.spaced_key = no
+
