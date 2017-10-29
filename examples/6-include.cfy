@@ -1,10 +1,10 @@
-# This file is part of the yasm project
+# This file is part of the confdoggo project
 # Feel free to use it as you wish
 
-# yasm config files support the including
+# doggo config files support the including
 # of multiple separate config files.
-# these files need not to be in yasm format
-# every supported backend for yasm is
+# these files need not to be in doggo format
+# every supported backend for confdoggo is
 # supported for inclusion.
 # see a full list at TODO
 
