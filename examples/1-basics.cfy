@@ -1,4 +1,4 @@
-# This file is part of the yasm project
+# This file is part of the confdoggo project
 # Feel free to use it as you wish
 
 
@@ -24,6 +24,7 @@ a_dict = {
    'plz': True
 }
 a_bool = true # or True, or False, or on, or off, or yes, or no, or 1, or 0, or true, or false
+              # doggo likes 'em all
 an_enum = 'LOOKS_LIKE_A_STRING'  # but it's not!
                                  # to make it work, your program
                                  # must define this key as an enum
