@@ -1,7 +1,7 @@
-# This file is part of the yasm project
+# This file is part of the confdoggo project
 # Feel free to use it as you wish
 
-# yasm config files support conditional
+# doggo config files support conditional
 # statements in a syntax similar to python's
 
 if RUN_LOCAL and TODAY >= 2017-01-01:
