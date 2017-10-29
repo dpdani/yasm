@@ -1,4 +1,4 @@
-# This file is part of the yasm project
+# This file is part of the confdoggo project
 # Feel free to use it as you wish
 
 #
@@ -18,6 +18,7 @@
     name = 'Pallino'
     is_sleeping = yes
     wants_food = on
+    is_doggo = no  # but it's ok
 </>
 
 <nesting>
