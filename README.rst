@@ -1,8 +1,12 @@
-yasm — Yet Another Settings Manager
-===================================
+confdoggo 🐶
+===========
 
-A settings/configuration files manager written in Python.
+confdoggo will be your configuration manager if you show him love 
 
-These are still early stages of code.
-Nonetheless if you have concerns/requests/need-someone-to-talk-to feel free to open
-an issue or pull request :)
+
+State of the doggo
+==================
+
+This doggo is still very young, help him grow up!
+
+You can feed him with issues, pull requests or love :)
