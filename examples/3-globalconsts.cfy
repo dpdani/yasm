@@ -1,11 +1,11 @@
-# This file is part of the yasm project
+# This file is part of the confdoggo project
 # Feel free to use it as you wish
 
-# yasm can provide global constants to your config files
+# doggo can provide global constants (barks) to your config files
 when = TODAY
 
-# full list available at: TODO
+# full list of barks available at: TODO
 
-# you can tell yasm to turn them off in your application
+# you can tell doggo to turn them off in your application
 # or you can provide your custom ones
 # see TODO for more details
