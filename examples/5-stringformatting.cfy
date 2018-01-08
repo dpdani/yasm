@@ -1,0 +1,12 @@
+# This file is part of the confdoggo project
+# Feel free to use it as you wish
+
+
+# formatting is easy with confdoggo
+# use variable names within curly braces
+$name = 'confdoggo'
+greeting = 'Hello from {$name}'
+
+# works the same with keys (also with . notation)
+server.name = 'John Doe'
+server.greeting = 'Hallo from {server.name}\'s server!'

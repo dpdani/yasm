@@ -1,7 +1,7 @@
 confdoggo 🐶
 ===========
 
-confdoggo will be your configuration manager if you show him love 
+confdoggo will be your configuration manager if you show him love
 
 
 State of the doggo
