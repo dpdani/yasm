@@ -2,15 +2,23 @@
 # Feel free to use it as you wish
 
 #
-# structured key basic syntax:
+# basic structured key syntax:
 #
 #   <IDENTIFIER>
 #       KEY1 = VAL1
 #       KEY2 = VAL2
 #       ...
-#   </>
+#   </IDENTIFIER>
 #
 # indentation is not mandatory, but highly appreciated :)
+# 
+# anonymous structured key syntax:
+# 
+#   foo = <>
+#       KEY1 = VAL1
+#       KEY2 = VAL2
+#       ...
+#   </>
 #
 
 
@@ -19,11 +27,11 @@
     is_sleeping = yes
     wants_food = on
     is_doggo = no  # but it's ok
-</>
+</cat>
 
 <nesting>
     hurts = 'your eyes'
     plz = <>                      # oh cool so you don't have to specify an identifier when it's nested
         do_dis = 'NEVER'          # yes, but doggo doesn't like nested
     </>
-</>
+</nesting>
