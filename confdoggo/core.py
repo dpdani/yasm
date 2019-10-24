@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Copyright (C) 2017  The confdoggo Authors
+# Copyright (C) 2019  The confdoggo Authors
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,7 +34,8 @@ class InconsistentSettingTypeException(DoggoException):
         self.setting_path = setting_path
         self.should_be = should_be
         self.got = got
-        super().__init__(f"setting type for '{setting_path}' should be {should_be}. Got: {got}.")
+        super().__init__(f"setting type for '{setting_path}' should be "
+                         f"{should_be}. Got: {got}.")
 
 
 class Settings:
@@ -42,12 +43,14 @@ class Settings:
         if type(tree) == dict:
             tree = self.parse(tree)
         if not isinstance(tree, settingstypes.Tree):
-            raise TypeError(f"expected Tree instance for argument tree. Got: '{tree}'.")
+            raise TypeError(f"expected Tree instance for argument tree. "
+                            f"Got: '{tree}'.")
         self.tree = tree
 
     def update(self, new_tree, scope=''):
         if not isinstance(new_tree, settingstypes.SettingsType):
-            raise TypeError(f"expected SettingsType instance for argument new_tree. Got: '{new_tree}'.")
+            raise TypeError(f"expected SettingsType instance for argument "
+                            f"new_tree. Got: '{new_tree}'.")
         if type(new_tree.value_) != dict:
             walked_path = 'self.tree'
             try:
@@ -65,10 +68,12 @@ class Settings:
         else:
             for name in new_tree.value_:
                 if isinstance(new_tree, settingstypes.SettingsType):
-                    self.update(new_tree.value_[name], scope=self.tree.name_ + scope + '.' + name)
+                    self.update(new_tree.value_[name], scope=self.tree.name_ +
+                                                             scope + '.' + name)
                 else:
-                    raise TypeError(f"expected iterators inside new_tree to be instances of Tree. "
-                                    "Got: '{new_tree.__class__.__name__}'.")
+                    raise TypeError(f"expected iterators inside new_tree to be "
+                                    f"instances of Tree. Got: "
+                                    f"'{new_tree.__class__.__name__}'.")
 
     @staticmethod
     def parse(data, name='top-level'):

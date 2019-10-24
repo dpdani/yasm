@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#
+
 # Copyright (C) 2019  The confdoggo Authors
 #
 # This program is free software: you can redistribute it and/or modify
@@ -16,8 +16,20 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-class DoggoException(Exception):
-    pass
+class Version:
+    major = 0
+    minor = 1
+    patch = 0
+    notes = 'alpha'
+    string = '.'.join((str(major), str(minor), str(patch))) + notes
 
-from .core import *
-from .settingstypes import *
+
+__title__ = 'confdoggo'
+__description__ = 'Your personal configuration doggo.'
+__url__ = 'https://github.com/dpdani/confdoggo'
+__version__ = Version()
+__author__ = 'Daniele Parmeggiani'
+__author_email__ = 'git@danieleparmeggiani.me'
+__license__ = 'GPLv3'
+__copyright__ = 'Copyright 2019 Daniele Parmeggiani'
+
