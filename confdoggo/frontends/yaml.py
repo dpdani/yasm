@@ -13,14 +13,16 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from .core import *
-from .__version__ import *
-import mimetypes
+from . import BaseFrontend
+from ..utils import Configuration, MissingLibraryException
 
-# add YAML to mimetypes database.
-# necessary because yaml does not yet have
-# an official mime type.
-mimetypes.add_type("application/x-yaml", ".yaml")
-mimetypes.add_type("application/x-yaml", ".yml")
-mimetypes.add_type("application/confdoggo", ".doggo")
-del mimetypes
+
+try:
+    import yaml
+except ImportError:
+    raise MissingLibraryException("PyYAML", "yaml")
+
+
+class YamlFrontend(BaseFrontend):
+    def parse(self, config: Configuration):
+        config.parsed_content = yaml.safe_load(config.content)

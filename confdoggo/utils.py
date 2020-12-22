@@ -13,14 +13,26 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from .core import *
-from .__version__ import *
-import mimetypes
+from dataclasses import dataclass
 
-# add YAML to mimetypes database.
-# necessary because yaml does not yet have
-# an official mime type.
-mimetypes.add_type("application/x-yaml", ".yaml")
-mimetypes.add_type("application/x-yaml", ".yml")
-mimetypes.add_type("application/confdoggo", ".doggo")
-del mimetypes
+
+@dataclass
+class Configuration:
+    url: str = None
+    content: str = None
+    mime_type: str = None
+    parsed_content: dict = None
+    watcher = None  # : watchers.BaseWatcher
+
+
+class DoggoException(Exception):
+    pass
+
+
+class MissingLibraryException(DoggoException):
+    def __init__(self, library, extras):
+        super().__init__(
+            f"missing library '{library}'. "
+            f"To install all the necessary components, "
+            f"run `pip install confdoggo[{extras}]`."
+        )

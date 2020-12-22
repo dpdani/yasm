@@ -12,15 +12,22 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+from pathlib import Path
 
-from .core import *
-from .__version__ import *
-import mimetypes
+import confdoggo
+import time
 
-# add YAML to mimetypes database.
-# necessary because yaml does not yet have
-# an official mime type.
-mimetypes.add_type("application/x-yaml", ".yaml")
-mimetypes.add_type("application/x-yaml", ".yml")
-mimetypes.add_type("application/confdoggo", ".doggo")
-del mimetypes
+
+class MySettings(confdoggo.Settings):
+    spam: int
+    cheese: bool = True
+
+
+settings = confdoggo.go_catch(MySettings, [Path(".") / "watchers.yaml"], watch=True)
+
+try:
+    while True:
+        print(settings)
+        time.sleep(1)
+except KeyboardInterrupt:
+    confdoggo.shutdown_watchers()
