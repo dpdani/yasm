@@ -3,6 +3,7 @@ name = "confdoggo"
 version = "0.1.0-alpha"
 description = "Your personal configuration doggo."
 authors = ["Daniele Parmeggiani <git@danieleparmeggiani.me>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
